@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import "./root.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background-color: var(--lightgreen);
+  padding: 0 20px;
+}
+input,
+.query-group label,
+.message {
+  height: 50px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-container {
+  padding: 40px;
+  background-color: var(--white);
+  max-width: 700px;
+  margin: 80px auto;
+  border-radius: 15px;
+}
+.form-container h1 {
+  color: var(--gray);
+}
+.name-group,
+.query-group {
+  display: flex;
+  gap: 20px;
+}
+.name-group label {
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 35px;
+}
+.email {
+  width: 100%;
+}
+.required-sign {
+  color: var(--green);
+}
+
+.query-group label {
+  display: flex;
+  width: 50%;
+  justify-content: start;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  cursor: pointer;
+}
+.radio-active {
+  background-color: var(--lightgreen);
+}
+.checkbox-label div {
+  display: flex;
+  padding: 0;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.message {
+  resize: vertical;
+  padding-top: 10px;
+  min-height: 100px;
+}
+.checkbox-label span {
+  padding: 0 20px 0 0 !important;
+}
+button {
+  color: white;
+  font-size: 1rem;
+  background-color: var(--green);
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  transition: all 0.4s;
+  background-color: #146455;
+}
+.error-message {
+  color: var(--red);
+}
+.success-message {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translate(-50%);
+  border: none;
+  background-color: var(--gray);
+  border-radius: 15px;
+  /* height: 100px; */
+  opacity: 0;
+  transition: all 0.5s;
+  padding: 20px;
+}
+.isVisable {
+  top: 20px;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.success-message span {
+  color: var(--white);
+}
+.success-message h2 {
+  display: flex;
+  gap: 5px;
+}
+.success-message p {
+  color: var(--lightgray);
+  margin-top: 10px;
+}
+.error-border {
+  border-color: var(--red);
+}
+
+@media only screen and (max-width: 550px) {
+  .name-group,
+  .query-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .name-group label,
+  .query-group label {
+    width: 100%;
+  }
+  .form-container {
+    padding: 20px;
+  }
+  label {
+    width: 100%;
+  }
+  .success-message {
+    width: 80%;
+  }
+}
